@@ -25,6 +25,10 @@ class NewAdapterRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string connectString = 3;</code>
      */
     private $connectString = '';
+    /**
+     * Generated from protobuf field <code>bool dbSpecified = 4;</code>
+     */
+    private $dbSpecified = false;
 
     /**
      * Constructor.
@@ -35,6 +39,7 @@ class NewAdapterRequest extends \Google\Protobuf\Internal\Message
      *     @type string $adapterName
      *     @type string $driverName
      *     @type string $connectString
+     *     @type bool $dbSpecified
      * }
      */
     public function __construct($data = NULL) {
@@ -104,6 +109,28 @@ class NewAdapterRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->connectString = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool dbSpecified = 4;</code>
+     * @return bool
+     */
+    public function getDbSpecified()
+    {
+        return $this->dbSpecified;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool dbSpecified = 4;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setDbSpecified($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->dbSpecified = $var;
 
         return $this;
     }
