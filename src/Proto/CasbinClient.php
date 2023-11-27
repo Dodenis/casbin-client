@@ -3,13 +3,13 @@
 
 // Original file comments:
 // Copyright 2018 The casbin Authors. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //      http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -508,6 +508,227 @@ class CasbinClient extends \Grpc\BaseStub {
     public function HasNamedGroupingPolicy(\Proto\PolicyRequest $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/proto.Casbin/HasNamedGroupingPolicy',
+        $argument,
+        ['\Proto\BoolReply', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Proto\UserRoleRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function GetDomains(\Proto\UserRoleRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/proto.Casbin/GetDomains',
+        $argument,
+        ['\Proto\ArrayReply', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Proto\UserRoleRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function GetRolesForUser(\Proto\UserRoleRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/proto.Casbin/GetRolesForUser',
+        $argument,
+        ['\Proto\ArrayReply', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Proto\UserRoleRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function GetImplicitRolesForUser(\Proto\UserRoleRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/proto.Casbin/GetImplicitRolesForUser',
+        $argument,
+        ['\Proto\ArrayReply', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Proto\UserRoleRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function GetUsersForRole(\Proto\UserRoleRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/proto.Casbin/GetUsersForRole',
+        $argument,
+        ['\Proto\ArrayReply', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Proto\UserRoleRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function HasRoleForUser(\Proto\UserRoleRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/proto.Casbin/HasRoleForUser',
+        $argument,
+        ['\Proto\BoolReply', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Proto\UserRoleRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function AddRoleForUser(\Proto\UserRoleRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/proto.Casbin/AddRoleForUser',
+        $argument,
+        ['\Proto\BoolReply', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Proto\UserRoleRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function DeleteRoleForUser(\Proto\UserRoleRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/proto.Casbin/DeleteRoleForUser',
+        $argument,
+        ['\Proto\BoolReply', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Proto\UserRoleRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function DeleteRolesForUser(\Proto\UserRoleRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/proto.Casbin/DeleteRolesForUser',
+        $argument,
+        ['\Proto\BoolReply', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Proto\UserRoleRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function DeleteUser(\Proto\UserRoleRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/proto.Casbin/DeleteUser',
+        $argument,
+        ['\Proto\BoolReply', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Proto\UserRoleRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function DeleteRole(\Proto\UserRoleRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/proto.Casbin/DeleteRole',
+        $argument,
+        ['\Proto\EmptyReply', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Proto\PermissionRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function GetPermissionsForUser(\Proto\PermissionRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/proto.Casbin/GetPermissionsForUser',
+        $argument,
+        ['\Proto\Array2DReply', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Proto\PermissionRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function GetImplicitPermissionsForUser(\Proto\PermissionRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/proto.Casbin/GetImplicitPermissionsForUser',
+        $argument,
+        ['\Proto\Array2DReply', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Proto\PermissionRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function DeletePermission(\Proto\PermissionRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/proto.Casbin/DeletePermission',
+        $argument,
+        ['\Proto\BoolReply', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Proto\PermissionRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function AddPermissionForUser(\Proto\PermissionRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/proto.Casbin/AddPermissionForUser',
+        $argument,
+        ['\Proto\BoolReply', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Proto\PermissionRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function DeletePermissionForUser(\Proto\PermissionRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/proto.Casbin/DeletePermissionForUser',
+        $argument,
+        ['\Proto\BoolReply', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Proto\PermissionRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function DeletePermissionsForUser(\Proto\PermissionRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/proto.Casbin/DeletePermissionsForUser',
+        $argument,
+        ['\Proto\BoolReply', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Proto\PermissionRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function HasPermissionForUser(\Proto\PermissionRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/proto.Casbin/HasPermissionForUser',
         $argument,
         ['\Proto\BoolReply', 'decode'],
         $metadata, $options);
